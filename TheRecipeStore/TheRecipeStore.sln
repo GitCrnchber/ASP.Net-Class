@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheRecipeStore", "TheRecipeStore\TheRecipeStore.csproj", "{3E2DA1C9-562A-40C8-9509-CCE1B2A3941A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{A061C9D4-4476-4B5E-8C1E-3361792F24F8}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{3BAAAE50-D1E1-4515-B01D-59F1A0540873}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\TheRecipeStore-WAWS-dev.json = PublishScripts\Configurations\TheRecipeStore-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3E2DA1C9-562A-40C8-9509-CCE1B2A3941A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2DA1C9-562A-40C8-9509-CCE1B2A3941A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2DA1C9-562A-40C8-9509-CCE1B2A3941A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2DA1C9-562A-40C8-9509-CCE1B2A3941A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3BAAAE50-D1E1-4515-B01D-59F1A0540873} = {A061C9D4-4476-4B5E-8C1E-3361792F24F8}
+	EndGlobalSection
+EndGlobal

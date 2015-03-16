@@ -1,0 +1,29 @@
+﻿@model IEnumerable<TheRecipeStore.Models.Recipe>
+
+<p>
+    @Html.ActionLink("Create New", "Create", "Home")
+</p>
+
+<table class="table">
+
+    <tr>
+        <th>Recipe</th>
+        <th>Author</th>
+        <th>Directions</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.RecipeName)</td>
+            <td>@Html.DisplayFor(modelItem => item.SubmitterID)</td>
+            <td>@Html.DisplayFor(modelItem => item.Directions)</td>
+
+
+        </tr>
+
+    }
+
+
+</table>

@@ -1,0 +1,151 @@
+﻿@using TheRecipeStore.Models
+@model TheRecipeStore.Models.Recipe
+
+From HomeController:
+        //[HttpPost]
+        //public ActionResult Create(Recipe recipe)
+        //{
+        //    db.Recipes.SubmitRecipeStub(recipe);
+        //    return RedirectToAction("Index");
+        //}
+
+From Indexcs.html.  Skeletons of forms working data 
+<html>
+<head>
+    <title>Ajax Test Partial Update</title>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+</head>
+<body>
+
+   <div class="jumbotron">
+    <h1>The Recipe Store</h1>
+    <p class="lead">The Recipe Store is a great place to get recipes.</p>
+    @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+    </div>
+
+
+    @using (Ajax.BeginForm(new AjaxOptions(){
+        HttpMethod = "POST",
+        Url = "BOL",
+        OnComplete = "some client event"
+    }))
+    {
+    <fieldset>
+        <legend>This is a demo form.</legend>
+        @Html.LabelFor(model => model.SubmitterID)
+        @Html.TextBoxFor(model => model.SubmitterID)
+
+        <input type="submit" value="Save" />
+    </fieldset>
+    }
+
+  
+    @using (Html.BeginForm())
+    {
+        <p><label>Your Name:  </label><input name="SubmitterID" /></p>
+
+        <p><label>Recipe Name:  </label><input name="RecipeName" /></p>
+   
+         <p><label>Directions:  </label><input name="Directions" /></p>
+
+        <p><input type="submit" value="Submit Recipe" /></p>
+        
+
+    }
+
+    <h2>Recipes</h2>
+
+    @Ajax.ActionLink("All", "All", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divRecipes",
+    InsertionMode = InsertionMode.Replace
+})
+
+    @Ajax.ActionLink("By Submitter", "Top", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divRecipes",
+    InsertionMode = InsertionMode.Replace
+})
+
+    @Ajax.ActionLink("By Directions", "Bottom", new AjaxOptions()
+{
+    HttpMethod = "GET",
+    UpdateTargetId = "divRecipes",
+    InsertionMode = InsertionMode.Replace
+})
+
+
+    <div id="divRecipes" style="height:250px;width:600px;overflow:scroll;"></div>
+
+   
+
+</body>
+</html>
+
+
+@*<div class="jumbotron">
+    <h1>The Recipe Store</h1>
+    <p class="lead">The Recipe Store is a great place to get recipes.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>*@
+
+//HOME CONTROLLER INDEX START
+@{
+       ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+//HOME CONTROLLER INDEX END
