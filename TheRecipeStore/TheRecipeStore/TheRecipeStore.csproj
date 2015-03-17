@@ -203,6 +203,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootswatch.less" />
+    <Content Include="Content\variables.less" />
     <None Include="Properties\PublishProfiles\TheRecipeStore.pubxml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -261,9 +263,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Recipes.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Content\_bootswatch.scss" />
+    <Content Include="Content\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Styles\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
